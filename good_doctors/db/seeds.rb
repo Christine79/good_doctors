@@ -10,22 +10,11 @@
 
 require 'faker'
 
-
-puts "coucou1"
 10.times do
   patient = Patient.create!(first_name: "#{Faker::Name.first_name}", last_name: "#{Faker::Name.middle_name}")
 end
-
-puts "coucou2"
 
 10.times do
 ##  doctor = Doctor.create!(first_name: "#{Faker::Name.first_name}", last_name: "#{Faker::Name.middle_name}" , specialty: "#{Faker::Educator.subject}", postal_code: "#{Faker::Address.zip_code}")
   doctor = Doctor.create!(first_name: "#{Faker::Name.first_name}", last_name: "#{Faker::Name.middle_name}" , specialty: "#{Faker::Name.middle_name}", postal_code: "#{Faker::Address.zip_code}")
 end
-puts "coucou3"
-
-10.times do
-##  doctor = Doctor.create!(first_name: "#{Faker::Name.first_name}", last_name: "#{Faker::Name.middle_name}" , specialty: "#{Faker::Educator.subject}", postal_code: "#{Faker::Address.zip_code}")
-  appointment = Appointment.create!(date: "#{Faker::Date.backward(14)}")
-end
-puts "coucou4"
